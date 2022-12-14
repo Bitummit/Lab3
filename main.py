@@ -21,6 +21,6 @@ if __name__ == '__main__':
                   loss='categorical_crossentropy',
                   metrics=['accuracy'])
 
-    model.fit(x_train, y_train_cat, batch_size=20, epochs=10, validation_split=0.2)
+    model.fit(x_train, y_train_cat, batch_size=100, epochs=750, validation_split=0.2)
 
-    model.save('16_model.h5')
+    model.save('16_model_next.h5')

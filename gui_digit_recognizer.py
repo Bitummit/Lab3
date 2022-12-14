@@ -24,6 +24,7 @@ def predict_digit(img):
     res = model.predict(img1)
     print(res)
     res = list(res)
+    print(np.argmax(res))
     return np.argmax(res)
 
 
@@ -40,7 +41,7 @@ class App(tk.Tk):
         self.button_clear = tk.Button(self, text="Очистить", command=self.clear_all)
 
         # Сетка окна
-        self.canvas.grid(row=0, column=0, pady=2, sticky=W, )
+        self.canvas.grid(row=0, column=0, pady=2, sticky=W )
         self.label.grid(row=0, column=1, pady=2, padx=2)
         self.classify_btn.grid(row=1, column=1, pady=2, padx=2)
         self.button_clear.grid(row=1, column=0, pady=2)
